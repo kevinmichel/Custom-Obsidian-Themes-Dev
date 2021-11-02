@@ -1858,8 +1858,8 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 
 /* Embed Blocks - Display Note Title Alt text */
 
-span.internal-embed:before {
-  content: "See:" "_" attr(alt);
+span.internal-embed:not(.image-embed)::before {
+  content: attr(alt);
   color: var(--text-faint);
 }
 /* ------ >>> END : Kev hack for Bible Verse Embeds <<< ------- */
