@@ -516,7 +516,8 @@ to get a right-side note block
   --text-muted: #8a8a8a;
   --text-faint: #797979;
   --text-folder-file: #b3b3b3;
-  --accent-strong: #f7f7f7;
+  /* --accent-strong: #f7f7f7; */
+  --accent-strong: var(--accent-em);
   --accent-em: #a4ca8e;
   --text-error: #e16d76;
   --text-error-hover: #c9626a;
@@ -577,7 +578,8 @@ to get a right-side note block
   --background-blockquote: #d3d3d31c;
   --background-code: #1616168c;
   --background-code-2: #4c4c4cc5;
-  --text-color-code: #d58000;
+  /* --text-color-code: #d58000; */
+   --text-color-code: var(--h3-color); /* #52c1da */
   --text-color-code-normal: #e7e7e7;
 
   --internal-link-color-in-highlight: #98d6ff;
@@ -768,7 +770,8 @@ to get a right-side note block
   --text-highlight-2: #000000;
   --text-faint: #7f7f7f;
   --text-folder-file: #272727;
-  --accent-strong: #000000;
+  /* --accent-strong: #000000; */
+  --accent-strong: var(--accent-em);
   --accent-em: #099d4e;
   --text-error: #e75545;
   --text-error-hover: #f86959;
@@ -832,6 +835,7 @@ to get a right-side note block
   --background-code: #ebebeb71;
   --background-code-2: #cccccc62;
   --text-color-code: #e95d00;
+  --text-color-code: var(--h3-color); /* #17abab */
   --text-color-code-normal: #000000;
 
   --internal-link-color-in-highlight: #007fd3;
@@ -1827,7 +1831,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 /* ------ >>> START : Kev hack for Bible Verse Embeds <<< ------- */
 /* Bible Verses in preview */
 
-/* .markdown-preview-view h6[data-heading^='v'],
+.markdown-preview-view h6[data-heading^='v'],
 .cc-pretty-preview .markdown-preview-view h6[data-heading^='v']
 {
   position: relative;
@@ -1841,9 +1845,10 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
   font-size: 10px !important;
   font-weight: bold;
   font-style: normal;
-} */
+  /* color: var(--text-faint) !important; */
+}
 
-/* .markdown-embed .markdown-preview-view h6[data-heading^='v'],
+.markdown-embed .markdown-preview-view h6[data-heading^='v'],
 .markdown-embed .cc-pretty-preview .markdown-preview-view h6[data-heading^='v']
 {
   position: unset !important;
@@ -1853,7 +1858,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
   margin-left: 0 !important;
   margin-right: 0 !important;
   font-size: inherit !important;
-}  */
+}
 
 /* Embed Blocks - Display Note Title Alt text */
 
@@ -2290,11 +2295,11 @@ b,
 span.cm-strong,
 :not(font) > strong {
   color: var(--accent-strong);
-  font-family: var(--font-family-strong) !important;
+  /* font-family: var(--font-family-strong) !important; */
 }
 
 font > strong {
-  font-family: var(--font-family-strong) !important;
+  /* font-family: var(--font-family-strong) !important; */
 }
 
 span.cm-em,
@@ -2311,7 +2316,7 @@ span.cm-em,
   -webkit-text-fill-color: transparent;
   background-color: #f55454;
   background-image: linear-gradient(120deg, #4cd0f8 0%,  #9e88ff 100%);
-  font-family: var(--font-family-strong) !important;
+  /* font-family: var(--font-family-strong) !important; */
   /* adapted from Obsidianite*/
 }
 
@@ -2330,7 +2335,7 @@ strong > em > font {
   padding-right: 0.12em;
   color: #0076e4;
   -webkit-mask:linear-gradient(120deg, #0000006e, #000000);
-  font-family: var(--font-family-strong) !important;
+  /* font-family: var(--font-family-strong) !important; */
 }
 
 /*internal link with strong&em*/
