@@ -521,7 +521,8 @@ to get a right-side note block
   --accent-em: #a4ca8e;
   --text-error: #e16d76;
   --text-error-hover: #c9626a;
-  --text-selection: #47a5914d;
+  /* --text-selection: #47a5914d; */
+  --text-selection: hsl(168deg 59% 26% / 50%);
   --text-on-accent: #dcddde;
   --interactive-normal: #20242b;
   --interactive-hover: #353b47;
@@ -639,7 +640,10 @@ to get a right-side note block
   --accent-cyber-bright: hsl(314deg 57% 63%); /*(pink Cybertron) */
   --accent-cyber-base: hsl(266deg 91% 73% / 50%); /* (purple) */
   --accent-cyber-muted: hsl(266deg 91% 73% / 22%);
-
+  
+  --current-line-bgcolor: hsl(214deg 80% 60% / 20%);
+  --fancy-cursor-color: var(--accent-cyber-bright);
+  --fancy-cursor-width: '0.1875em';
   /*old*/
   /*
   --h1-color: #4ea0e2;
@@ -1412,6 +1416,8 @@ display: none;
 .workspace-tab-header-inner {
   padding: 3px 9px;
 }
+
+
 
 /*reduce space of header buttons*/
 div.nav-header {
@@ -3176,16 +3182,22 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
 
 /*an active line highlight in vim normal mode */
 .cm-fat-cursor .CodeMirror-activeline .CodeMirror-linebackground {
-  background-color: #468eeb33 !important;
+  background-color: var(--current-line-bgcolor) !important;
 }
 /* ------ >>> Kev hack - Fancy Cursor <<< ------- */
 .theme-light .CodeMirror-cursor, .theme-light .cm-s-obsidian .cm-cursor {
   border:none;
-  border-right:2px solid var(--theme-color);
+  border-right: var(--fancy-cursor-width) solid var(--theme-color);
 }
 .theme-dark .CodeMirror-cursor, .theme-dark .cm-s-obsidian .cm-cursor {
   border:none;
-  border-right:2px solid var(--theme-color);
+  /* border-right: 3px solid var(--theme-color); */
+  border-right: 2px solid var(--fancy-cursor-color);
+}
+
+/* Kevin: active line background color - live preview mode */
+.mod-active .cm-active.cm-line {
+  background-color: var(--current-line-bgcolor);
 }
 /* ------ >>> Kev hack <<< ------- */
 /*if you want the highlight to present in both normal and insert mode of vim*/
