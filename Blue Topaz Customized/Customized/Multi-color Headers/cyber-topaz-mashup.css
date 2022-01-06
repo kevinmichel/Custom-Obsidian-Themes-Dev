@@ -635,6 +635,11 @@ to get a right-side note block
   --h5-color: #67c073; /*d8d8d8*/
   --h6-color: #b4b4b4;
 
+  /* UI colors (pink from Cybertron) */
+  --accent-cyber-bright: hsl(314deg 57% 63%); /*(pink Cybertron) */
+  --accent-cyber-base: hsl(266deg 91% 73% / 50%); /* (purple) */
+  --accent-cyber-muted: hsl(266deg 91% 73% / 22%);
+
   /*old*/
   /*
   --h1-color: #4ea0e2;
@@ -729,7 +734,8 @@ to get a right-side note block
   --tape-color: #99999967;
 
   /*Sliding panes*/
-  --header-color: #f1a634d0;
+  /* --header-color: #f1a634d0; */
+  --header-color: var(--accent-cyber-bright);
 
   /*admonition*/
   --admonition-bg-color: #1111118f;
